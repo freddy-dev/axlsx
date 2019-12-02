@@ -1832,6 +1832,7 @@
   </xsd:complexType>
   <xsd:complexType name="CT_RPrElt">
     <xsd:choice maxOccurs="unbounded">
+      <xsd:element name="sz" type="CT_FontSize" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="rFont" type="CT_FontName" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="charset" type="CT_IntProperty" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="family" type="CT_IntProperty" minOccurs="0" maxOccurs="1"/>
@@ -1843,7 +1844,6 @@
       <xsd:element name="condense" type="CT_BooleanProperty" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="extend" type="CT_BooleanProperty" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="color" type="CT_Color" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="sz" type="CT_FontSize" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="u" type="CT_UnderlineProperty" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="vertAlign" type="CT_VerticalAlignFontProperty" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="scheme" type="CT_FontScheme" minOccurs="0" maxOccurs="1"/>
@@ -2359,9 +2359,9 @@
     <xsd:attribute name="topLeftCell" type="ST_CellRef" use="optional"/>
     <xsd:attribute name="colorId" type="xsd:unsignedInt" use="optional" default="64"/>
     <xsd:attribute name="zoomScale" type="xsd:unsignedInt" use="optional" default="100"/>
-    <xsd:attribute name="zoomScaleNormal" type="xsd:unsignedInt" use="optional" default="0"/>
-    <xsd:attribute name="zoomScaleSheetLayoutView" type="xsd:unsignedInt" use="optional" default="0"/>
-    <xsd:attribute name="zoomScalePageLayoutView" type="xsd:unsignedInt" use="optional" default="0"/>
+    <xsd:attribute name="zoomScaleNormal" type="xsd:unsignedInt" use="optional" default="10"/>
+    <xsd:attribute name="zoomScaleSheetLayoutView" type="xsd:unsignedInt" use="optional" default="10"/>
+    <xsd:attribute name="zoomScalePageLayoutView" type="xsd:unsignedInt" use="optional" default="10"/>
     <xsd:attribute name="workbookViewId" type="xsd:unsignedInt" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_Pane">
@@ -3774,6 +3774,7 @@
   </xsd:simpleType>
   <xsd:complexType name="CT_Font">
     <xsd:choice maxOccurs="unbounded">
+      <xsd:element name="sz" type="CT_FontSize" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="name" type="CT_FontName" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="charset" type="CT_IntProperty" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="family" type="CT_FontFamily" minOccurs="0" maxOccurs="1"/>
@@ -3785,7 +3786,6 @@
       <xsd:element name="condense" type="CT_BooleanProperty" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="extend" type="CT_BooleanProperty" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="color" type="CT_Color" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="sz" type="CT_FontSize" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="u" type="CT_UnderlineProperty" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="vertAlign" type="CT_VerticalAlignFontProperty" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="scheme" type="CT_FontScheme" minOccurs="0" maxOccurs="1"/>
